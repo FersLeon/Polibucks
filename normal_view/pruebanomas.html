@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="Images/icon.ico">
+    <script src="Scripts/script_menu.js" async></script>
+    <script src="Scripts/script_header.js" async></script>
+    <link rel="stylesheet" href="Style/styles_header.css">
+    <!--Se agrega el titulo de la pagina-->
+    <title>Administración</title>
+    <!--Enlace hacia los estilos-->
+    <link rel="stylesheet" href="Style/styles_indexadmin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="Style/modal.css">
+    <link rel="stylesheet" href="Style/styles_header.css">
+    <script src="Scripts/modal.js" defer></script>
+    <script src="Scripts/reloj.js" defer></script>
+
+</head>
+
+<body>
+    <header class="main-header">
+        <img src="Images/logo.png" class="logo">
+        <nav id="nav" class="main-nav">
+            <div class="nav-links">
+                <a class="link-item" href="index.html">Inicio</a>
+                <a class="link-item" href="pagina_menu.html">Menú</a>
+                <a class="link-item" href="pagina_rewards.html">Ordenes</a>
+                <a class="link-item" href="PaginaEventos.html">Usuarios</a>
+                <a class="link-item" href="nosotros.html">Mensajes</a>
+                <a><span><?php echo $_SESSION['admin_nombre']; ?></span></a>
+                <form method = 'post' >
+                    <button type="submit" class="logout"> Salir </button>
+                </form>
+            </div>
+        </nav>
+        <button id="button-menu" class="button-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="user-box">
+            
+        </div>
+    </header>
+
+
+    <!--Reloj-->
+    <section class="relosjs">
+        <nav>
+            <form name="form_dia">
+                <input class="dia" type="text" name="dia" size="15" onfocus="window.document.form_dia.dia.blur()">
+            </form>
+            <form name="form_reloj">
+                <input class="reloj" type="text" name="reloj" size="10" onfocus="window.document.form_reloj.reloj.blur()">
+            </form>
+        </nav>
+    </section>
+    <!--Contenido principal-->
+    <main>
+        <h1>Bienvenido Administrador</h1>
+        <div class="slider">
+            <!--Se crea una lista desordenada-->
+           <ul>
+            <!--Elementos de la lista-->
+            <li><a href="../pagina_rewards/index.html"><img src="Images/Menu.jpeg" alt=""></a></li>
+            <li><a href="../pagina_menu/menu.html"><img src="Images/HolaPrinav.jpeg" alt=""></a></li>
+            <li><a href="../pagina_nosotros/nosotros.html"><img src="Images/Conocenos.jpeg" alt=""></a></li>
+            <li><a href="../pagina_eventos/Pagina2.html"><img src="Images/DayPoli.jpeg" alt=""></a></li>
+           </ul> 
+        </div>
+        <!--Se agregara una seccion que contienen imagen y texto-->
+        <div>
+            <img src="Images/Frase&I.png" alt="" width="1200" height="400" class="Contend">
+        </div>
+    </main>
+    <div class="popup">
+        <button id="close">&times;</button>
+        <h2 class="modal_title">¡Bienvenido, Gracias por Visitar!</h2>
+        <p class="modal_paragram">Visitante numero</p>
+        <p class="modal_paragram">Disfruta de tu instancia </p>
+    </div>
+    <!--Lienea para dividir el contenido principal del footer-->
+    <hr class="linea">
+    <!--Pie de página-->
+    <footer class="footer">
+        <p>Todos los derechos reservados 2023. </p>
+        <p> &copy; Polibucks S.A de C.V</p>
+    </footer>
+</body>
+
+
+</html>
