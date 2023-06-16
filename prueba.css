@@ -1,0 +1,71 @@
+input[type="file"]{
+    display: none;
+}
+
+.imf{
+    display: inline-block;
+    text-transform: uppercase;
+    color: white;
+    background-color: #715e66;
+    text-align: center;
+    padding: 15px 40px;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    user-select: none;
+    cursor: pointer;
+    box-shadow: 5px 15px 25px rgba(0,0,0,0.35) ;
+    border-radius: 3px;
+}
+
+<div class="linea2">
+<section class="add-products">
+    <form  method="POST" action="" enctype="multipart/form-data">
+       <div class="input-field">
+            <label>Nombre del producto</label>
+            <input type="text" name="name" class="input"  required>
+       </div> 
+       <div class="input-field">
+            <label>Precio</label>
+            <input type="text" name="price" class="input"  required>
+       </div> 
+
+       <input type="file" id="uploadBtn">
+       <label for="uploadBtn" class="imf">Subir Imagen</label>
+
+
+       <input type="submit" name="add_product" value="add product" class="btn">
+    </form>
+</section>
+</div>
+
+<section>
+<div class="form-box">
+    <div class="form-value">
+        <form  method="post">
+            <h2 class="Title">Iniciar Sesion</h2>
+
+            <div class="inputbox">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="text" name="name" class="input"  required>
+                <label for="" class="label">Nombre del producto</label>
+            </div>
+
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="text" name="price" class="input"  required>
+                <label for="" class="label">Precio</label>
+            </div>
+
+            <input type="reset" class="resetBtn" value="Cancelar">
+            <input type="submit" name="submit-btn" class="submitBtn" value="Iniciar">
+            <input type="file" name="uploadBtn" class="uploadBtn" value="Inicisr">
+
+            <input type="file" id="uploadBtn">
+            <label for="uploadBtn" class="imf">Subir Imagen</label>
+            <input type="file" id="uploadBtn">
+            <label for="uploadBtn" class="imf">Subir Imagen</label>
+
+        </form>
+    </div>
+</div>
+</section>
